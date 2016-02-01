@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- On lollipop devices margin from the top -->
+    <dimen name="actionbar_status_bar_height">24dp</dimen>
+</resources>

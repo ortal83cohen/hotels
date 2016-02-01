@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_hotellist_filters">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/default_padding">
+
+            <TextView
+                style="@style/HotelsAppTheme.TextAppearance.BoldBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/price_range" />
+
+            <include layout="@layout/results_filter_price" />
+
+            <TextView
+                style="@style/HotelsAppTheme.TextAppearance.BoldBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/star_rating" />
+
+            <include
+                layout="@layout/results_filter_stars"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/minimum_default_padding" />
+
+            <TextView
+                style="@style/HotelsAppTheme.TextAppearance.BoldBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/default_padding"
+                android:text="@string/guest_rating" />
+
+            <include
+                layout="@layout/results_filter_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/minimum_default_padding" />
+
+            <TextView
+                style="@style/HotelsAppTheme.TextAppearance.BoldBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/default_padding"
+                android:text="@string/filter_accommodation_types" />
+
+            <GridLayout
+                android:id="@+id/acctypes_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal"
+                android:layout_marginTop="@dimen/minimum_default_padding"
+                android:columnCount="2"
+                android:columnOrderPreserved="true">
+
+            </GridLayout>
+
+            <TextView
+                style="@style/HotelsAppTheme.TextAppearance.BoldBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/default_padding"
+                android:text="@string/filter_facilities" />
+
+            <GridLayout
+                android:id="@+id/facilities_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal"
+                android:layout_marginTop="@dimen/minimum_default_padding"
+                android:columnCount="2"
+                android:columnOrderPreserved="true">
+
+            </GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/apply"
+        style="@style/HotelsAppTheme.Widget.AccentBottomButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_button_height"
+        android:text="@string/apply" />
+
+</LinearLayout>

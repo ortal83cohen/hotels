@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.etb.app.widget.AppBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_bar"
+    windowActionBarOverlay="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
+    android:windowActionBarOverlay="true"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:subtitleTextAppearance="?attr/subtitleTextAppearance"
+    app:titleMarginBottom="0dp"
+    app:titleTextAppearance="?attr/titleTextAppearance" />

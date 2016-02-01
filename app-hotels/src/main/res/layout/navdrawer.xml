@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Navigation Drawer -->
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_navigation_drawer"
+    android:name="com.etb.app.fragment.NavigationFragment"
+    android:layout_width="@dimen/nav_drawer_width"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    app:layout="@layout/fragment_navigation_drawer"
+    tools:layout="@layout/fragment_navigation_drawer" />

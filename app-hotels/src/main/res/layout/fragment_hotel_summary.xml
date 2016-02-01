@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_light"
+                android:orientation="vertical"
+                tools:context=".HotelDetailsActivity">
+
+                <FrameLayout
+                    android:id="@+id/image_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/hotel_summary_image_size"
+                        android:background="@color/libhotels_theme_accent">
+
+                        <Button
+                            android:id="@+id/click_pager"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" />
+                    </android.support.v4.view.ViewPager>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|bottom"
+                        android:layout_margin="@dimen/default_padding"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/snippet_title"
+                            style="@style/HotelsAppTheme.TextAppearance.HotelSummary.HotelName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:textStyle="bold"
+                            tools:text="Hotel Name" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RatingBar
+                                android:id="@+id/star_rating"
+                                style="@style/HotelsAppTheme.Widget.WhiteHotelRatingBar" />
+
+                            <TextView
+                                android:id="@android:id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/size_text_small"
+                                tools:text="0.6 km to city center" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/number_images"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:layout_margin="@dimen/default_padding"
+                        android:drawableLeft="@drawable/photo_camera"
+                        android:drawablePadding="@dimen/minimum_default_padding"
+                        android:text="0/0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/size_text_secondary" />
+                </FrameLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never">
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+                            <include
+                                layout="@layout/hotel_details_reviews"
+                                android:layout_width="0dp"
+                                android:layout_height="68dp"
+                                android:layout_marginBottom="@dimen/minimum_default_padding"
+                                android:layout_marginLeft="@dimen/default_padding"
+                                android:layout_marginRight="@dimen/default_padding"
+                                android:layout_marginTop="@dimen/default_padding"
+                                android:layout_weight="1" />
+
+                            <include
+                                layout="@layout/hotel_details_facilities"
+                                android:layout_width="0dp"
+                                android:layout_height="68dp"
+                                android:layout_marginBottom="@dimen/minimum_default_padding"
+                                android:layout_marginRight="@dimen/default_padding"
+                                android:layout_marginTop="@dimen/default_padding"
+                                android:layout_weight="1" />
+
+                        </LinearLayout>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="76dp"
+                            android:layout_marginLeft="@dimen/default_padding"
+                            android:layout_marginRight="@dimen/default_padding"
+                            card_view:cardElevation="1dp">
+
+                            <fragment
+                                android:id="@+id/map_container"
+                                class="com.google.android.gms.maps.SupportMapFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                tools:layout="@layout/fragment_map" />
+                        </android.support.v7.widget.CardView>
+
+                        <FrameLayout
+                            android:id="@+id/hotel_details_room"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/hoteldetails_room_height"
+                            android:layout_marginBottom="@dimen/minimum_default_padding"
+                            android:layout_marginLeft="@dimen/default_padding"
+                            android:layout_marginRight="@dimen/default_padding"
+                            android:layout_marginTop="@dimen/minimum_default_padding" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/available_rooms_button"
+        style="@style/HotelsAppTheme.Widget.HotelSummary.AccentBottomButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:text="@string/view_more_available_rooms" />
+</LinearLayout>

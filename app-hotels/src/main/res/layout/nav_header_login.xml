@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_primary"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/default_padding">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/com_facebook_profile_picture_blank_portrait"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="4dp" />
+
+
+    <TextView
+        android:id="@+id/profile_name"
+        style="@style/HotelsAppTheme.TextAppearance.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_padding"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        tools:text="John" />
+
+    <TextView
+        android:id="@+id/profile_surname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/minimum_default_padding"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        tools:text="Smith" />
+
+</LinearLayout>
+

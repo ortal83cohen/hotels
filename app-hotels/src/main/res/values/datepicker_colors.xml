@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="datepicker_normal_weekday_color">@color/libhotels_theme_text_primary</color>
+    <color name="datepicker_normal_text_color">@color/libhotels_theme_text_secondary</color>
+    <color name="datepicker_disabled_text_color">@color/libhotels_theme_accent_light</color>
+    <color name="datepicker_selected_text_color">@color/white</color>
+    <color name="datepicker_selected_day_color">@color/libhotels_theme_text_primary</color>
+    <color name="datepicker_highlighted_day_color">@color/gray_light</color>
+
+    <color name="datepicker_default_view_animator_color_holo_light">#f2f2f2</color>
+</resources>

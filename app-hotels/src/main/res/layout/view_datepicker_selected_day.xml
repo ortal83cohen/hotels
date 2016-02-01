@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/datepicker_selected_title"
+        style="@style/HotelsAppTheme.TextAppearance.Datepicker.Selected.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/depart" />
+
+
+    <TextView
+        android:id="@+id/datepicker_selected_day"
+        style="@style/HotelsAppTheme.TextAppearance.Datepicker.Selected.Day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:text="27" />
+
+    <TextView
+        android:id="@+id/datepicker_selected_month"
+        style="@style/HotelsAppTheme.TextAppearance.Datepicker.Selected.Month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/june" />
+</merge>

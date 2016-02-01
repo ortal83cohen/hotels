@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/hotel_list_no_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_margin="@dimen/default_padding"
+        card_view:cardBackgroundColor="@color/white"
+        card_view:cardCornerRadius="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/no_results"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp"
+            android:paddingTop="@dimen/default_padding"
+            android:text="@string/no_favorites_chosen_yet"
+            android:textSize="@dimen/size_text_secondary" />
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:layout_marginRight="6sp"
+            android:drawablePadding="6dp"
+            android:drawableRight="@drawable/btn_favorite"
+            android:text="@string/click_on"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/default_padding"
+            android:text="@string/to_add_a_favorite_hotel"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+box: gfx2015/android
+# Build definition
+build:
+  # The steps that will be executed on build
+  steps:
+    - script:
+        name: show base information
+        code: |
+          ./gradlew -v
+          echo $ANDROID_HOME
+          echo $ANDROID_SDK_VERSION
+          echo $ANDROID_BUILD_TOOLS
+          echo $ANDROID_UPDATE_FILTER
+          echo $AWS_KEY
+#    - wercker/android-sdk-update@0.0.14:
+#        filter: extra-android-m2repository,extra-google-m2repository,extra-android-support,extra-google-google_play_services
+    - script:
+        name: prepare keystore
+        code: |
+          echo $HOTELS_KEYSTORE | base64 --decode > hotels.jkc
+          echo "" >> gradle.properties
+          echo "HOTELS_KEYSTORE_FILE=$WERCKER_SOURCE_DIR/hotels.jkc" >> gradle.properties
+          echo "HOTELS_KEYSTORE_PASSWORD=$HOTELS_KEYSTORE_PASSWORD" >> gradle.properties
+          echo "HOTELS_KEY_ALIAS=$HOTELS_KEY_ALIAS" >> gradle.properties
+          echo "HOTELS_KEY_PASSWORD=$HOTELS_KEY_PASSWORD" >> gradle.properties
+          echo "HOTELS_CORE_INTERFACE_ENDPOINT=null" >> gradle.properties
+    # A step that executes `gradle build` command
+    - script:
+        name: run gradle
+        code: |
+          ./gradlew --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR build
+    - script:
+        name: save apk
+        code: |
+          echo "Save Base app: "
+          source app-hotels/build/version.properties
+          cp app-hotels/build/outputs/apk/app-hotels-debug.apk $WERCKER_OUTPUT_DIR/hotels-"$versionCode"-`date +%Y%m%d`-`git rev-parse --short $WERCKER_GIT_COMMIT`-debug.apk
+          cp app-hotels/build/outputs/apk/app-hotels-release.apk $WERCKER_OUTPUT_DIR/hotels-"$versionCode"-`date +%Y%m%d`-`git rev-parse --short $WERCKER_GIT_COMMIT`-release.apk
+          cp app-hotels/build/outputs/apk/app-hotels-release.apk $WERCKER_OUTPUT_DIR/hotels-release.apk
+          cp app-hotels/build/outputs/lint-results.html $WERCKER_OUTPUT_DIR/lint-results-"$versionCode"-`date +%Y%m%d`-`git rev-parse --short $WERCKER_GIT_COMMIT`.html
+          cp app-hotels/build/outputs/lint-results.xml $WERCKER_OUTPUT_DIR/lint-results-"$versionCode"-`date +%Y%m%d`-`git rev-parse --short $WERCKER_GIT_COMMIT`.xml
+after-steps:
+    # Show the build results
+    - script:
+        name: inspect build result
+        on: success
+        code: |
+          ls -la app-hotels/build/outputs/apk/
+          cp app-hotels/build/outputs/apk/*.apk $WERCKER_REPORT_ARTIFACTS_DIR
+          cp app-hotels/build/outputs/lint-results-*.apk $WERCKER_REPORT_ARTIFACTS_DIR
+deploy:
+  steps:
+    - script:
+        name: ftp upload
+        code: |
+          find . -type f -print -exec curl -u $FTP_USER:$FTP_PASSWORD --ftp-create-dirs -T {} ftp://android.easytobook.us/{} \;
+#    - sawatani/Android-GooglePlay@1.0.2:
+#        track_name: alpha
+#        application_name: Easytboook-App/1.0
+#        package_name: com.easytobook.app
+#        service_account_email: $PLAYSTORE_EMAIL
+#        service_account_key_base64: $PLAYSTORE_KEY
+#        apk_file_path: hotels-release.apk

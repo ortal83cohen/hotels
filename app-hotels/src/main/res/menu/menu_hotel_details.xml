@@ -1,0 +1,7 @@
+<menu xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.etb.app.activity.BookingSummaryActivity">
+    <!--<item android:id="@+id/menu_settings"-->
+    <!--android:title="@string/action_settings"-->
+    <!--android:orderInCategory="100"-->
+    <!--app:showAsAction="never"/>-->
+</menu>

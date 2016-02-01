@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hotel_list_no_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:showIn="@layout/fragment_hotel_list">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_margin="@dimen/default_padding"
+        card_view:cardBackgroundColor="@color/white"
+        card_view:cardCornerRadius="2dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/no_results"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp"
+            android:paddingTop="@dimen/default_padding"
+            android:text="@string/currently_no_hotels_available"
+            android:textSize="@dimen/size_text_secondary" />
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_padding"
+        android:layout_marginLeft="@dimen/default_padding"
+        android:layout_marginRight="@dimen/default_padding"
+        android:text="@string/several_reasons"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_padding"
+        android:layout_marginRight="@dimen/default_padding"
+        android:text="@string/no_hotels_in_area"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_padding"
+        android:layout_marginRight="@dimen/default_padding"
+        android:text="@string/no_availability"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/filters_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_padding"
+        android:layout_marginRight="@dimen/default_padding"
+        android:text="@string/filters_not_match"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_padding"
+        android:layout_marginLeft="@dimen/default_padding"
+        android:layout_marginRight="@dimen/default_padding"
+        android:text="@string/bad_internet_connection"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/modify_preferences"
+        android:layout_width="170dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/default_padding"
+        android:background="@drawable/rounded_ripple_button_theme_accent"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/default_padding"
+        android:text="@string/modify_preferences"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/reset_filters"
+        android:layout_width="170dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/default_padding"
+        android:background="@drawable/rounded_ripple_button_theme_accent"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/default_padding"
+        android:text="@string/reset_filters"
+        android:textColor="@color/white" />
+
+</LinearLayout>

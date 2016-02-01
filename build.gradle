@@ -1,0 +1,57 @@
+import java.text.SimpleDateFormat
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.google.gms:google-services:1.5.0-beta2'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+def gitSha() {
+    return 'git rev-parse --short HEAD'.execute().text.trim()
+}
+
+def buildTime() {
+    def df = new SimpleDateFormat("yyyyMMdd")
+    return df.format(new Date())
+}
+
+def buildVersionCode() {
+    def now = new Date()
+    // UNIX timestamp since  Fri, 17 Apr 2015 12:00:00 GMT
+    def begin = new Date(1429272000000)
+    def code = (int) ((now.getTime() - begin.getTime()) / 1000)
+    return code;
+}
+
+def writeVersionProperties(File projectBuildDir, int versionCodeValue) {
+    def props = new Properties()
+    props.setProperty("versionCode", String.valueOf(versionCodeValue))
+    def file = new File(projectBuildDir.path + "/version.properties");
+    if (!file.getParentFile().exists()) {
+        logger.info('writeVersionProperties: ' + projectBuildDir.path + ' does not exists')
+        return;
+    }
+    def writer = new FileWriter(file);
+    try {
+        props.store(writer, null)
+        writer.flush()
+    } finally {
+        if (writer) {
+            writer.close()
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}

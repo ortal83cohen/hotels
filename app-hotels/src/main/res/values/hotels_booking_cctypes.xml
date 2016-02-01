@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cctypes_array">
+        <item>Visa</item>
+        <item>Mastercard</item>
+        <item>Diners Club</item>
+        <item>JCB</item>
+        <item>American Express</item>
+        <item>Discover</item>
+        <item>Card type</item>
+    </string-array>
+</resources>

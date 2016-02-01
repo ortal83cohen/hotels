@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/filter_frame"
+    style="@style/HotelsAppTheme.Fragment.SemiTransparent.Container"
+    android:background="@color/transparent_black">
+
+
+    <LinearLayout
+        android:id="@+id/sort_frame"
+        style="@style/HotelsAppTheme.Fragment.SemiTransparent.Content">
+
+        <TextView
+            style="HotelsAppTheme.TextAppearance.Hotel.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/default_padding"
+            android:text="@string/sort_by"
+            android:textColor="#3f4745" />
+
+        <RadioGroup
+            android:id="@+id/radio_sort_group"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radio_popularity"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/filter_item_button"
+                android:button="@android:color/transparent"
+                android:checked="true"
+                android:drawableRight="@drawable/check_mark"
+                android:padding="@dimen/minimum_default_padding"
+                android:tag="fav_asc"
+                android:textColor="@color/sort_text_color"
+                tools:text="Default" />
+
+            <RadioButton
+                android:id="@+id/radio_price_high_to_low"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/filter_item_button"
+                android:button="@android:color/transparent"
+                android:drawableRight="@drawable/check_mark"
+                android:padding="@dimen/minimum_default_padding"
+                android:tag="price_desc"
+                android:textColor="@color/sort_text_color"
+                tools:text="Price - High to low" />
+
+            <RadioButton
+                android:id="@+id/radio_price_low_to_high"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/filter_item_button"
+                android:button="@android:color/transparent"
+                android:drawableRight="@drawable/check_mark"
+                android:padding="@dimen/minimum_default_padding"
+                android:tag="price_asc"
+                android:textColor="@color/sort_text_color"
+                tools:text="Price - Low to high" />
+
+            <RadioButton
+                android:id="@+id/radio_stars_high_to_low"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/filter_item_button"
+                android:button="@android:color/transparent"
+                android:drawableRight="@drawable/check_mark"
+                android:padding="@dimen/minimum_default_padding"
+                android:tag="stars_desc"
+                android:textColor="@color/sort_text_color"
+                tools:text="Stars - High to low" />
+
+            <RadioButton
+                android:id="@+id/radio_stars_low_to_high"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/filter_item_button"
+                android:button="@android:color/transparent"
+                android:drawableRight="@drawable/check_mark"
+                android:padding="@dimen/minimum_default_padding"
+                android:tag="stars_asc"
+                android:textColor="@color/sort_text_color"
+                tools:text="Stars - Low to high" />
+
+            <RadioButton
+                android:id="@+id/radio_guest_high_to_low"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/filter_item_button"
+                android:button="@android:color/transparent"
+                android:drawableRight="@drawable/check_mark"
+                android:padding="@dimen/minimum_default_padding"
+                android:tag="rating_desc"
+                android:textColor="@color/sort_text_color"
+                tools:text="Guest Reviews - Best to worst" />
+
+            <RadioButton
+                android:id="@+id/radio_guest_low_to_high"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/filter_item_button"
+                android:button="@android:color/transparent"
+                android:drawableRight="@drawable/check_mark"
+                android:padding="@dimen/minimum_default_padding"
+                android:tag="rating_asc"
+                android:textColor="@color/sort_text_color"
+                tools:text="Guest Reviews - Worst to best  " />
+
+            <RadioButton
+                android:id="@+id/radio_distance"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/filter_item_button"
+                android:button="@android:color/transparent"
+                android:drawableRight="@drawable/check_mark"
+                android:padding="@dimen/minimum_default_padding"
+                android:tag="distance_asc"
+                android:textColor="@color/sort_text_color"
+                tools:text="Distance" />
+        </RadioGroup>
+    </LinearLayout>
+</FrameLayout>
+
+
+    

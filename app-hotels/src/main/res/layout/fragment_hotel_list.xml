@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/loader_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="@string/loading_results"
+        android:textColor="@color/theme_primary" />
+
+    <com.etb.app.widget.recyclerview.EndlessRecyclerView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include layout="@layout/view_hotels_list_no_results" />
+
+    <FrameLayout
+        android:id="@+id/panel_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/results_panel_top_height"
+        android:background="@color/gray_light"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/default_padding">
+
+        <TextView
+            android:id="@+id/button_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="@drawable/ripple_button_color_gray"
+            android:drawablePadding="@dimen/minimum_default_padding"
+            android:gravity="center"
+            android:textColor="@color/theme_primary"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:text="Default" />
+
+        <TextView
+            android:id="@+id/available_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:text="We found 999 matches available" />
+
+    </FrameLayout>
+</FrameLayout>

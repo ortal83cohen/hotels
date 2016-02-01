@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/rating_title"
+        style="@style/HotelsAppTheme.TextAppearance.Reviews.RatingName"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        tools:text="Sleep Quality" />
+
+    <ProgressBar
+        android:id="@+id/rating_progressbar"
+        style="@style/HotelsAppTheme.Widget.Reviews.RatingBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:max="50"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/default_padding"
+        android:progress="35" />
+
+    <TextView
+        android:id="@+id/rating_value"
+        style="@style/HotelsAppTheme.TextAppearance.Reviews.RatingName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="5.7" />
+</LinearLayout>

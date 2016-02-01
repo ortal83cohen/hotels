@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="maps_snippet_hotel_height">152dp</dimen>
+    <dimen name="maps_marker_padding">16dp</dimen>
+    <dimen name="minimum_default_padding">8dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="home_view_elevation">6dp</dimen>
+    <dimen name="listview_image_width">120dp</dimen>
+    <dimen name="listview_image_height">@dimen/listview_row_height</dimen>
+    <dimen name="listview_row_height">94dp</dimen>
+    <dimen name="one_dp">1dp</dimen>
+
+    <dimen name="bottom_button_hight">64dp</dimen>
+    <!-- On pre lollipop devices skip margin from the top -->
+    <dimen name="actionbar_status_bar_height">0dp</dimen>
+
+    <dimen name="preference_item_padding_side">8dip</dimen>
+    <dimen name="preference_item_padding_inner">8dip</dimen>
+    <!-- Preference widget area width (to the left of the text) -->
+    <dimen name="preference_widget_width">48dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+
+    <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
+         https://developer.android.com/design/patterns/navigation-drawer.html -->
+    <dimen name="navigation_drawer_width">240dp</dimen>
+    <dimen name="nav_drawer_width">280dp</dimen>
+    <dimen name="size_text_primary">20sp</dimen>
+    <dimen name="size_text_secondary">16sp</dimen>
+    <dimen name="size_text_small">9sp</dimen>
+    <dimen name="size_half_byte">4dp</dimen>
+    <dimen name="size_byte">8dp</dimen>
+
+    <dimen name="hotel_summary_image_size">240dp</dimen>
+    <dimen name="booking_summary_image_height">100dp</dimen>
+
+    <dimen name="list_button_drawable_stroke">1dp</dimen>
+    <dimen name="list_button_drawable_icon_size">32dp</dimen>
+    <dimen name="list_button_drawable_icon_padding">24dp</dimen>
+
+    <dimen name="hotels_booking_pager_tab_radius">16dp</dimen>
+    <dimen name="hotels_booking_pager_tab_height">48dp</dimen>
+    <dimen name="hotels_booking_pager_tab_spacing">64dp</dimen>
+    <dimen name="hotels_booking_pager_tab_width">48dp</dimen>
+    <dimen name="hotels_booking_pager_label_size">16dp</dimen>
+
+    <dimen name="special_discount_text_size">24dp</dimen>
+    <dimen name="special_discount_text_padding">4dp</dimen>
+    <dimen name="special_discount_icon_size">48dp</dimen>
+
+    <dimen name="bottom_button_height">56dp</dimen>
+
+    <dimen name="minimum_default_elevation">4dp</dimen>
+    <dimen name="hoteldetails_room_height">232dp</dimen>
+    <dimen name="top_margin_home_fragment">120dp</dimen>
+    <dimen name="results_panel_top_height">40dp</dimen>
+    <dimen name="home_instructions_margin">80dp</dimen>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/HotelsAppTheme.TextAppearance.Normal.Bold"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:gravity="center"
+    android:padding="@dimen/default_padding"
+    android:text="@string/loading_more"
+    android:textColor="@color/theme_accent">
+
+</TextView>

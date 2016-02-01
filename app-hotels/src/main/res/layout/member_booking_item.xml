@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginLeft="@dimen/default_padding"
+        android:layout_marginRight="@dimen/default_padding">
+
+        <TextView
+            android:id="@+id/city"
+            style="@style/HotelsAppTheme.TextAppearance.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/destination"
+            android:drawablePadding="@dimen/minimum_default_padding"
+            tools:text="London" />
+
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/minimum_default_padding"
+            tools:text="United Kingdom" />
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_padding"
+        android:layout_marginRight="@dimen/default_padding"
+        android:layout_marginTop="28dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/summary_image" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.etb.app.widget.NumberBoxView
+                    android:id="@+id/check_in_date"
+                    android:layout_width="0dp"
+                    android:layout_height="136dp"
+                    android:layout_weight="1"
+                    app:numberBoxIcon="@drawable/ic_datepicker_checkin"
+                    app:numberBoxSubtitle="Jun"
+                    app:numberBoxTitle="@string/check_in_caps"
+                    app:numberBoxValue="17"
+                    style="@style/HotelsAppTheme.Widget.NumberBoxView"/>
+
+                <com.etb.app.widget.NumberBoxView
+                    android:id="@+id/check_out_date"
+                    android:layout_width="0dp"
+                    android:layout_height="136dp"
+                    android:layout_weight="1"
+                    app:numberBoxIcon="@drawable/ic_datepicker_checkout"
+                    app:numberBoxSubtitle="Jun"
+                    app:numberBoxTitle="@string/checkout_caps"
+                    app:numberBoxValue="16"
+                    style="@style/HotelsAppTheme.Widget.NumberBoxView"/>
+
+                <com.etb.app.widget.NumberBoxView
+                    android:id="@+id/number_nights"
+                    android:layout_width="0dp"
+                    android:layout_height="136dp"
+                    android:layout_weight="1"
+                    app:numberBoxIcon="@drawable/nights"
+                    app:numberBoxSubtitle="@null"
+                    app:numberBoxTitle="NIGHT"
+                    app:numberBoxValue="1"
+                    style="@style/HotelsAppTheme.Widget.NumberBoxView"/>
+
+                <com.etb.app.widget.NumberBoxView
+                    android:id="@+id/number_rooms"
+                    android:layout_width="0dp"
+                    android:layout_height="136dp"
+                    android:layout_weight="1"
+                    app:numberBoxIcon="@drawable/ic_searchbox_rooms"
+                    app:numberBoxSubtitle="@null"
+                    app:numberBoxTitle="ROOM"
+                    app:numberBoxValue="1"
+                    style="@style/HotelsAppTheme.Widget.NumberBoxView"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/room_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_padding"
+                android:layout_marginRight="@dimen/default_padding"
+                android:layout_marginTop="@dimen/default_padding"
+                android:drawablePadding="@dimen/minimum_default_padding"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/size_text_primary"
+                android:textStyle="bold"
+                tools:text="Very long long long room name text" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_padding"
+                android:layout_marginRight="@dimen/default_padding"
+                android:layout_marginTop="@dimen/default_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_price"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    tools:text="E300" />
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/btn_manage"
+                style="@style/HotelsAppTheme.Widget.AccentBottomButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginTop="@dimen/default_padding"
+                android:text="@string/manage_confirmed_booking" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>

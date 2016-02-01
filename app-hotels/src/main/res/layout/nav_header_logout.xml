@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/default_padding"
+    android:paddingRight="@dimen/default_padding">
+
+    <Button
+        android:id="@+id/nav_login_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="@dimen/minimum_default_padding"
+        android:background="@drawable/rounded_ripple_button_theme_white"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:textColor="@color/theme_primary" />
+
+    <Button
+        android:id="@+id/nav_sign_up_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_ripple_button_theme_primary"
+        android:text="@string/sign_up"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</LinearLayout>
+

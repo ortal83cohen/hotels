@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="@dimen/default_padding"
+    android:paddingRight="@dimen/default_padding"
+    android:paddingTop="8dp">
+
+    <TextView
+        style="@style/HotelsAppTheme.TextAppearance.Booking.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableBottom="@drawable/booking_personal_info"
+        android:drawablePadding="8dp"
+        android:text="@string/personal_details" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/login_button"
+                style="@style/HotelsAppTheme.Widget.Button.Accent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login_or_signup"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/first_name"
+                style="@style/HotelsAppTheme.Widget.Booking.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="@string/first_name"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/last_name"
+                style="@style/HotelsAppTheme.Widget.Booking.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="@string/last_name"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:nextFocusDown="@+id/email"
+                android:singleLine="true" />
+
+            <AutoCompleteTextView
+                android:id="@+id/email"
+                style="@style/HotelsAppTheme.Widget.Booking.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="@string/email_address"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:lines="1"
+                android:nextFocusDown="@+id/phone_number"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/phone_number"
+                style="@style/HotelsAppTheme.Widget.Booking.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="@string/phone_number"
+                android:inputType="phone"
+                android:lines="1"
+                android:nextFocusDown="@+id/next_button"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="NumberPicker">
+        <attr name="titleDrawable" format="reference" />
+        <attr name="titleText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SelectedDayView">
+        <attr name="android:text" />
+    </declare-styleable>
+
+    <declare-styleable name="LibHotelsTheme">
+        <attr name="libHotelsBackground" format="color" />
+        <attr name="libHotelsColorTextPrimary" format="color" />
+        <attr name="libHotelsColorTextSecondary" format="color" />
+        <attr name="libHotelsColorHighlight" format="color" />
+        <attr name="libHotelsDatePickerViewStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="BookingStepsView">
+        <attr name="bookingStepColorActive" format="color" />
+        <attr name="bookingStepColorNotActive" format="color" />
+        <attr name="bookingStepColorHighlight" format="color" />
+        <attr name="bookingStepColorBackground" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="DatePickerView">
+        <attr name="calendarTextColor" format="color" />
+        <attr name="calendarWeekdayColor" format="color" />
+        <attr name="calendarSelectedDayColor" format="color" />
+        <attr name="calendarHighlightedDayColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CheckBoxGroup">
+        <attr name="groupCheckboxLayout" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="NumberBoxView">
+        <attr name="numberBoxValue" format="string" />
+        <attr name="numberBoxTitle" format="string" />
+        <attr name="numberBoxSubtitle" format="string" />
+        <attr name="numberBoxIcon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="TileCheckBox">
+        <attr name="tileDrawable" format="reference" />
+    </declare-styleable>
+</resources>

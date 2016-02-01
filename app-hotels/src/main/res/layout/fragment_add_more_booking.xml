@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/HotelsAppTheme.Fragment.SemiTransparent.Container">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/HotelsAppTheme.Fragment.SemiTransparent.Content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/HotelsAppTheme.TextAppearance.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_padding"
+            android:text="@string/add_more_booking" />
+
+        <EditText
+            android:id="@+id/booking_number"
+            style="@style/HotelsAppTheme.Widget.Booking.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_padding"
+            android:gravity="center"
+            android:hint="@string/booking_number"
+            android:inputType="textCapWords" />
+
+        <EditText
+            android:id="@+id/password"
+            style="@style/HotelsAppTheme.Widget.Booking.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_padding"
+            android:gravity="center"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+
+
+        <Button
+            android:id="@+id/btn_save"
+            style="@style/HotelsAppTheme.Widget.AccentBottomButton"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/bottom_button_height"
+            android:layout_margin="@dimen/default_padding"
+            android:text="@string/add" />
+    </LinearLayout>
+
+</FrameLayout>

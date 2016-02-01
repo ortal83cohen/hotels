@@ -1,0 +1,182 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+
+        >
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/group_buttons_holder"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:layout_marginRight="@dimen/default_padding"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/top_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/instructions"
+                    fontPath="@string/font_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/minimum_default_padding"
+                    android:layout_marginRight="@dimen/minimum_default_padding"
+                    android:layout_marginTop="@dimen/home_instructions_margin"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="20"
+                    android:text="@string/fill_in_destination"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    tools:ignore="MissingPrefix" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/minimum_default_padding">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteTextView_location"
+                        style="@style/HotelsAppTheme.Widget.AutocompleteView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/default_padding"
+                        android:drawableStart="@drawable/current_location"
+                        android:hint="@string/location_chooser_text" />
+
+                    <ImageButton
+                        android:id="@+id/autoCompleteTextView_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@android:color/transparent"
+                        android:padding="@dimen/default_padding"
+                        android:src="@drawable/btn_close"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/minimum_default_padding">
+
+                <com.etb.app.widget.NumberBoxView
+                    android:id="@+id/check_in_button"
+                    android:layout_width="0dp"
+                    android:layout_height="136dp"
+                    android:layout_marginBottom="@dimen/minimum_default_padding"
+                    android:layout_marginTop="@dimen/minimum_default_padding"
+                    android:layout_weight="1"
+                    app:numberBoxIcon="@drawable/ic_datepicker_checkin"
+                    app:numberBoxSubtitle="SEP"
+                    app:numberBoxTitle="@string/check_in_caps"
+                    app:numberBoxValue="29"
+                    style="@style/HotelsAppTheme.Widget.NumberBoxView"/>
+
+                <com.etb.app.widget.NumberBoxView
+                    android:id="@+id/check_out_button"
+                    android:layout_width="0dp"
+                    android:layout_height="136dp"
+                    android:layout_marginBottom="@dimen/minimum_default_padding"
+                    android:layout_marginLeft="@dimen/minimum_default_padding"
+                    android:layout_marginTop="@dimen/minimum_default_padding"
+                    android:layout_weight="1"
+                    app:numberBoxIcon="@drawable/ic_datepicker_checkout"
+                    app:numberBoxSubtitle="SEP"
+                    app:numberBoxTitle="@string/checkout_caps"
+                    app:numberBoxValue="30"
+                    style="@style/HotelsAppTheme.Widget.NumberBoxView"/>
+
+                <com.etb.app.widget.NumberBoxView
+                    android:id="@+id/persons_button"
+                    android:layout_width="0dp"
+                    android:layout_height="136dp"
+                    android:layout_marginBottom="@dimen/minimum_default_padding"
+                    android:layout_marginLeft="@dimen/minimum_default_padding"
+                    android:layout_marginTop="@dimen/minimum_default_padding"
+                    android:layout_weight="1"
+                    app:numberBoxIcon="@drawable/ic_searchbox_guests"
+                    app:numberBoxSubtitle="@null"
+                    app:numberBoxTitle="PERSONS"
+                    app:numberBoxValue="2"
+                    style="@style/HotelsAppTheme.Widget.NumberBoxView"/>
+
+                <com.etb.app.widget.NumberBoxView
+                    android:id="@+id/rooms_button"
+                    android:layout_width="0dp"
+                    android:layout_marginBottom="@dimen/minimum_default_padding"
+                    android:layout_marginLeft="@dimen/minimum_default_padding"
+                    android:layout_marginTop="@dimen/minimum_default_padding"
+                    android:layout_weight="1"
+
+                    app:numberBoxIcon="@drawable/ic_searchbox_rooms"
+                    app:numberBoxSubtitle="@null"
+                    app:numberBoxTitle="ROOMS"
+                    app:numberBoxValue="1"
+                    style="@style/HotelsAppTheme.Widget.NumberBoxView" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <com.etb.app.widget.NumberPicker
+                    android:id="@+id/number_persons_selector"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="@drawable/ripple_button_color_highlighted"
+                    android:padding="@dimen/default_padding" />
+
+                <com.etb.app.widget.NumberPicker
+                    android:id="@+id/number_rooms_selector"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="@drawable/ripple_button_color_highlighted"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/default_padding" />
+
+                <com.etb.app.widget.SmallDatePicker xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/stay_datepicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/search_hotels"
+        style="@style/HotelsAppTheme.Widget.AccentBottomButton"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bottom_button_height"
+        android:layout_gravity="center_horizontal|bottom"
+        android:text="@string/search" />
+
+</FrameLayout>

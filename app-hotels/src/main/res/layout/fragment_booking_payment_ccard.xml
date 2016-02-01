@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="@dimen/default_padding"
+    android:paddingRight="@dimen/default_padding"
+    android:paddingTop="8dp">
+
+    <TextView
+        style="@style/HotelsAppTheme.TextAppearance.Booking.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableBottom="@drawable/booking_card_details"
+        android:drawablePadding="8dp"
+        android:text="@string/credit_card_details" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_padding"
+                android:drawableLeft="@drawable/ssl_verisign"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="@string/use_secure_connection"
+                android:textSize="14dp" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/paymethodcredit_creditcards" />
+
+            <EditText
+                android:id="@+id/ccard_name_first"
+                style="@style/HotelsAppTheme.Widget.Booking.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/first_name_on_card"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/ccard_name_last"
+                style="@style/HotelsAppTheme.Widget.Booking.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/last_name_on_card"
+                android:inputType="textPersonName" />
+
+            <com.etb.app.widget.CreditCardEditText
+                android:id="@+id/ccard_number"
+                style="@style/HotelsAppTheme.Widget.Booking.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/card_number"
+                android:nextFocusDown="@+id/ccard_exp_month" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/ccard_exp_month"
+                    style="@style/HotelsAppTheme.Widget.Booking.EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="@string/month"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:nextFocusDown="@+id/ccard_exp_year" />
+
+                <EditText
+                    android:id="@+id/ccard_exp_year"
+                    style="@style/HotelsAppTheme.Widget.Booking.EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="@string/year"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:nextFocusDown="@+id/ccard_ccv" />
+
+                <EditText
+                    android:id="@+id/ccard_ccv"
+                    style="@style/HotelsAppTheme.Widget.Booking.EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/cvc_back"
+                    android:gravity="center"
+                    android:hint="@string/ccv"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:nextFocusDown="@+id/next_button" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>
+

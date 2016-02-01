@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/default_padding"
+    android:layout_marginRight="@dimen/default_padding"
+    android:layout_marginTop="@dimen/default_padding"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_padding"
+        android:orientation="vertical">
+
+        <include layout="@layout/summary_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+
+            <com.etb.app.widget.NumberBoxView
+                android:id="@+id/number_nights"
+                style="@style/HotelsAppTheme.Widget.NumberBoxView"
+                android:layout_width="0dp"
+                android:layout_height="126dp"
+                android:layout_weight="1"
+                app:numberBoxIcon="@drawable/nights"
+                app:numberBoxSubtitle="@null"
+                app:numberBoxTitle="NIGHT"
+                app:numberBoxValue="1" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/default_padding"
+                android:layout_marginTop="@dimen/default_padding"
+                android:background="@color/gray" />
+
+            <com.etb.app.widget.NumberBoxView
+                android:id="@+id/number_guests"
+                style="@style/HotelsAppTheme.Widget.NumberBoxView"
+                android:layout_width="0dp"
+                android:layout_height="126dp"
+                android:layout_weight="1"
+                app:numberBoxIcon="@drawable/ic_searchbox_guests"
+                app:numberBoxSubtitle="@null"
+                app:numberBoxTitle="GUESTS"
+                app:numberBoxValue="1" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/default_padding"
+                android:layout_marginTop="@dimen/default_padding"
+                android:background="@color/gray" />
+
+            <com.etb.app.widget.NumberBoxView
+                android:id="@+id/number_rooms"
+                style="@style/HotelsAppTheme.Widget.NumberBoxView"
+                android:layout_width="0dp"
+                android:layout_height="126dp"
+                android:layout_weight="1"
+                app:numberBoxIcon="@drawable/ic_searchbox_rooms"
+                app:numberBoxSubtitle="@null"
+                app:numberBoxTitle="ROOM"
+                app:numberBoxValue="1" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/default_padding"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:layout_marginRight="@dimen/default_padding"
+            android:background="@color/gray" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_padding"
+                android:layout_marginRight="@dimen/default_padding"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/hotel_address"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    tools:text="Address" />
+            </LinearLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/navigate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="@dimen/minimum_default_padding"
+                android:layout_marginRight="@dimen/default_padding"
+                android:layout_marginTop="@dimen/minimum_default_padding"
+                android:src="@drawable/menu_map_view"
+                app:backgroundTint="@color/theme_primary"
+                app:borderWidth="0dp"
+                app:elevation="3dp"
+                app:fabSize="normal" />
+
+        </FrameLayout>
+
+
+        <Button
+            android:id="@+id/phone_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_padding"
+            android:background="@drawable/ripple_button_gray_border_color_white"
+            android:drawableLeft="@drawable/call"
+            android:drawablePadding="@dimen/default_padding"
+            android:padding="@dimen/default_padding"
+            android:textColor="@color/theme_accent"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/email_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_padding"
+            android:background="@drawable/ripple_button_gray_border_color_white"
+            android:drawableLeft="@drawable/email"
+            android:drawablePadding="@dimen/default_padding"
+            android:lines="1"
+            android:padding="@dimen/default_padding"
+            android:textColor="@color/theme_accent_2"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="@dimen/default_padding"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/room_name"
+                    style="@style/HotelsAppTheme.TextAppearance.HotelSummary.RoomName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_padding"
+                    android:layout_marginRight="@dimen/default_padding"
+                    android:layout_marginTop="@dimen/minimum_default_padding"
+                    tools:text="Room name" />
+
+                <TextView
+                    android:id="@+id/room_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:text="@string/special_deal_discount"
+                    android:textColor="@color/theme_accent"
+                    android:textSize="@dimen/size_text_secondary"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/room_extra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:text="@string/free_breakfast_included"
+                    android:textColor="@color/theme_accent"
+                    android:textSize="@dimen/size_text_secondary" />
+
+                <TextView
+                    android:id="@+id/room_refundable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:text="@string/non_refundable"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/size_text_secondary" />
+
+                <TextView
+                    android:id="@+id/room_persons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:text="@string/_2_person_max"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/size_text_secondary" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="82dp"
+                        android:layout_gravity="right|bottom"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/base_rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|bottom"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="30dp"
+                            android:textColor="@color/gray_dark"
+                            android:textSize="@dimen/size_text_small"
+                            android:visibility="gone"
+                            tools:text="E300" />
+
+                        <TextView
+                            android:id="@+id/price"
+                            style="@style/HotelsAppTheme.TextAppearance.HotelSummary.Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center_vertical"
+                            android:paddingRight="@dimen/default_padding" />
+
+
+                    </FrameLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/default_padding"
+            android:layout_marginTop="@dimen/default_padding"
+            android:background="@color/gray" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:layout_marginRight="@dimen/default_padding">
+
+            <TextView
+                android:id="@+id/tax_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_tax_summary"
+                android:textSize="@dimen/size_text_secondary" />
+
+            <TextView
+                android:id="@+id/tax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="@string/text_tax_summary"
+                android:textSize="@dimen/size_text_secondary" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:layout_marginRight="@dimen/default_padding">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_price"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="@string/total_price"
+                android:textColor="@android:color/black" />
+        </FrameLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

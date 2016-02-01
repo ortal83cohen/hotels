@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+
+    tools:showIn="@layout/fragment_member_profile">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/login_etb_logo_icon_orange"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="80dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/profile_name"
+                style="@style/HotelsAppTheme.TextAppearance.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                tools:text="John" />
+
+            <TextView
+                android:id="@+id/profile_surname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/minimum_default_padding"
+                android:singleLine="true"
+                tools:text="Smith" />
+
+            <ImageButton
+                android:id="@+id/btn_profile_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/minimum_default_padding"
+                android:background="?attr/selectableItemBackground"
+                android:src="@drawable/edit_green" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/profile_birthdate"
+            style="@style/HotelsAppTheme.TextAppearance.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            tools:text="August 31st, 1984" />
+    </LinearLayout>
+
+</merge>

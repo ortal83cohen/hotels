@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/loader_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/loader_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="90dp"
+        android:text="@string/loading_results"
+        android:textColor="@color/theme_primary" />
+
+    <com.etb.app.widget.recyclerview.EndlessRecyclerView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/minimum_default_padding" />
+
+    <include layout="@layout/view_hotels_list_no_results" />
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/panel_top"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/results_panel_top_height"-->
+    <!--android:background="@color/gray_light"-->
+    <!--android:paddingLeft="@dimen/default_padding"-->
+    <!--android:paddingRight="@dimen/default_padding">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/available_count"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="left|center_vertical"-->
+    <!--android:textSize="@dimen/size_text_primary" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/delete_list"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="fill_parent"-->
+    <!--android:layout_gravity="right|center_vertical"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--android:padding="@dimen/default_padding"-->
+    <!--android:src="@drawable/icon_trash" />-->
+
+    <!--</FrameLayout>-->
+</FrameLayout>

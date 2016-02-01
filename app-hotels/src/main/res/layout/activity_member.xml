@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_primary"
+            app:tabIndicatorColor="@color/theme_text_light"
+            app:tabIndicatorHeight="3dp"
+            app:tabSelectedTextColor="@color/theme_text_light"
+            app:tabTextAppearance="@style/HotelsAppTheme.TextAppearance.Tab"
+            app:tabTextColor="#fbd0c3" />
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_overlay_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</merge>

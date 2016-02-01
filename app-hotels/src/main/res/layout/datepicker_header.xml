@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/daypicker_selector_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="8dp">
+
+    <ImageButton
+        android:id="@+id/datepicker_arrow_left"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="left"
+        android:src="@drawable/arrow_calendar_left" />
+
+    <LinearLayout
+        android:id="@+id/datepicker_month_year_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/datepicker_month"
+            style="@style/HotelsAppTheme.TextAppearance.Datepicker.MonthYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:gravity="center"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/june" />
+
+        <TextView
+            android:id="@+id/datepicker_year"
+            style="@style/HotelsAppTheme.TextAppearance.Datepicker.MonthYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="2015" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/datepicker_arrow_right"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/arrow_calendar_right" />
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/price_range"
+        style="@style/HotelsAppTheme.Widget.FilterPriceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        tools:text="EUR 10 - EUR 1250" />
+
+    <com.appyvet.rangebar.RangeBar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/price_rangebar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:connectingLineColor="@color/theme_primary"
+        app:pinColor="@color/theme_primary"
+        app:rangeBar="true"
+        app:rangeBarColor="@color/theme_primary"
+        app:selectorColor="@color/theme_accent"
+        app:selectorSize="4dp"
+        app:textColor="@color/white"
+        app:tickColor="@color/theme_primary"
+        app:tickEnd="1250"
+        app:tickInterval="10"
+        app:tickStart="10" />
+
+
+</merge>

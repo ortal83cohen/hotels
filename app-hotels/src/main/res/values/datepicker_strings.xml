@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- TRANSLATABLE -->
+    <string name="item_is_selected">"%1$s selected"</string>
+    <!--
+    Content mDescription for the month and day selector in the date picker, which displays
+    a selectable grid of days laid out by month.
+    [CHAR LIMIT=50]
+ -->
+    <string name="day_picker_description">Month grid of days</string>
+    <!--
+        Content mDescription for the year selector in the date picker, which displays
+        a scrolling, vertical list of years.
+        [CHAR LIMIT=50]
+     -->
+    <string name="year_picker_description">Year list</string>
+    <!-- Accessibility announcement for the day picker [CHAR LIMIT=NONE] -->
+    <string name="select_day">Select month and day</string>
+    <!-- Accessibility announcement for the year picker [CHAR LIMIT=NONE] -->
+    <string name="select_year">Select year</string>
+</resources>

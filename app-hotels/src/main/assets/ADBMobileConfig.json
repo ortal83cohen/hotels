@@ -1,0 +1,35 @@
+{
+  "lastModified": "2015-11-17T12:48:57.161Z",
+  "target": {
+    "clientCode": "",
+    "timeout": 5
+  },
+  "audienceManager": {
+    "server": "",
+    "analyticsForwardingEnabled": false
+  },
+  "acquisition": {
+    "server": "c00.adobe.com",
+    "appid": "b9c32335ec568d89bb6b26547f0f78bc2a421949f72f2342990315283b5d3462"
+  },
+  "analytics": {
+    "rsids": "mmteasytobook.app",
+    "server": "makemytrip.sc.omtrdc.net",
+    "ssl": false,
+    "offlineEnabled": true,
+    "charset": "UTF-8",
+    "lifecycleTimeout": 300,
+    "privacyDefault": "optedin",
+    "batchLimit": 0,
+    "timezone": "IST",
+    "timezoneOffset": 330,
+    "referrerTimeout": 0,
+    "backdateSessionInfo": false,
+    "poi": []
+  },
+  "messages": [],
+  "remotes": {
+    "analytics.poi": "https://assets.adobedtm.com/b213090c5204bf94318f4ef0539a38b487d10368/scripts/satellite-56210dd4386330001700064f.json",
+    "messages": "https://assets.adobedtm.com/b213090c5204bf94318f4ef0539a38b487d10368/scripts/satellite-56210dd0653863001700091e.json"
+  }
+}

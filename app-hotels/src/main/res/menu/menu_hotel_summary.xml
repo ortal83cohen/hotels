@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_like"
+        android:icon="@drawable/btn_favorite_state"
+        android:title="@string/like"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_dates"
+        android:icon="@drawable/menu_edit_destination"
+        android:title="@string/change_your_dates"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_streetview"
+        android:icon="@drawable/ic_streetview"
+        android:title="@string/google_streetview"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/default_padding"
+
+                />
+
+            <TextView
+                style="@style/HotelsAppTheme.TextAppearance.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="16dp"
+                android:text="@string/booking_information" />
+
+            <include layout="@layout/confirmation_information_card" />
+
+            <TextView
+                style="@style/HotelsAppTheme.TextAppearance.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="16dp"
+                android:text="@string/hotels_and_rooms" />
+
+            <include layout="@layout/confirmation_hotels_and_rooms_card" />
+
+            <TextView
+                style="@style/HotelsAppTheme.TextAppearance.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="16dp"
+                android:text="@string/booking_important_information" />
+
+            <include layout="@layout/confirmation_important_information_card" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

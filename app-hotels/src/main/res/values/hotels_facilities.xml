@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="facility_disabled">Disabled friendly</string>
+    <string name="facility_internet">Internet</string>
+    <string name="facility_parking">Parking</string>
+    <string name="facility_pets_allowed">Pets allowed</string>
+    <string name="facility_child_discount">Child discount</string>
+    <string name="facility_swimming_pool">Swimming pool</string>
+    <string name="facility_air_condition">Air-conditioning</string>
+    <string name="facility_fitness">Fitness center</string>
+    <string name="facility_non_smoking">Non-Smoking</string>
+</resources>

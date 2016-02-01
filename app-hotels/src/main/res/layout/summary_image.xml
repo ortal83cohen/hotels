@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/image_frame"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/image_placeholder"
+    tools:showIn="@layout/fragment_booking_summary">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/place_holder_img" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/image_overlay_background"
+        android:padding="@dimen/default_padding">
+
+        <TextView
+            android:id="@+id/snippet_title"
+            style="@style/HotelsAppTheme.TextAppearance.HotelSummary.HotelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            tools:text="Hotel Name" />
+
+        <RatingBar
+            android:id="@+id/star_rating"
+            style="@style/HotelsAppTheme.Widget.WhiteHotelRatingBar" />
+    </LinearLayout>
+</FrameLayout>

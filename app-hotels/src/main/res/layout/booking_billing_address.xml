@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Spinner
+        android:id="@+id/billing_country"
+        style="@style/HotelsAppTheme.Widget.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:imeOptions="actionNext"
+        android:inputType="textPersonName"
+        android:nextFocusDown="@+id/billing_city"
+        android:title="@string/country" />
+
+    <Spinner
+        android:id="@+id/billing_state"
+        style="@style/HotelsAppTheme.Widget.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:hint="@string/state"
+        android:inputType="textPostalAddress"
+        android:nextFocusDown="@+id/billing_city"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/billing_city"
+        style="@style/HotelsAppTheme.Widget.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:hint="@string/city"
+        android:inputType="textPersonName"
+        android:nextFocusDown="@+id/billing_address" />
+
+
+    <EditText
+        android:id="@+id/billing_address"
+        style="@style/HotelsAppTheme.Widget.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:hint="@string/address"
+        android:inputType="textPostalAddress"
+        android:nextFocusDown="@+id/billing_postal" />
+
+    <EditText
+        android:id="@+id/billing_postal"
+        style="@style/HotelsAppTheme.Widget.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:hint="@string/postal_code"
+        android:inputType="textPostalAddress"
+        android:nextFocusDown="@+id/next_button" />
+
+
+</merge>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="HotelsAppTheme.Transparent" parent="HotelsAppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="HotelsAppThemeBase" parent="LibHotelsTheme">
+        <item name="colorPrimary">@color/theme_primary</item>
+        <item name="colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="colorAccent">@color/theme_accent</item>
+        <item name="android:windowBackground">@color/theme_background</item>
+
+        <!-- Status bar color on lollipop will not be drawn if translucent set to true-->
+        <item name="android:windowTranslucentStatus">false</item>
+
+        <item name="libHotelsDatePickerViewStyle">@style/HotelsAppTheme.Widget.Datepicker</item>
+
+    </style>
+
+    <style name="HotelsAppThemeBase.TransparentToolbar" parent="LibHotelsTheme">
+        <item name="colorPrimary">@color/theme_primary</item>
+        <item name="colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="colorAccent">@color/theme_accent</item>
+        <item name="android:windowBackground">@color/theme_background</item>
+        <item name="libHotelsDatePickerViewStyle">@style/HotelsAppTheme.Widget.Datepicker</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="LibHotelsTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">?attr/libHotelsBackground</item>
+        <item name="android:textViewStyle">@style/HotelsAppTheme.Widget.TextView</item>
+        <item name="android:windowSoftInputMode">stateHidden</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+        <item name="colorPrimary">@color/libhotels_theme_primary</item>
+        <item name="colorPrimaryDark">@color/libhotels_theme_primary_dark</item>
+        <item name="colorAccent">@color/libhotels_theme_primary</item>
+
+        <item name="titleTextAppearance">@style/HotelsAppTheme.TextAppearance.AppBar.Title</item>
+        <item name="subtitleTextAppearance">@style/HotelsAppTheme.TextAppearance.AppBar.Subtitle
+        </item>
+
+        <item name="libHotelsBackground">@color/libhotels_theme_background</item>
+        <item name="libHotelsColorTextPrimary">@color/libhotels_theme_text_primary</item>
+        <item name="libHotelsColorTextSecondary">@color/libhotels_theme_text_secondary</item>
+        <item name="libHotelsColorHighlight">@color/libhotels_theme_accent_light</item>
+        <item name="libHotelsDatePickerViewStyle">@style/HotelsAppTheme.Widget.Datepicker</item>
+    </style>
+</resources>

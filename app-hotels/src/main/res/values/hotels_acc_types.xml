@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="acctype_hotel">Hotel</string>
+    <string name="acctype_hostel">Hostel</string>
+    <string name="acctype_b_and_b">B&amp;B</string>
+    <string name="acctype_apartment">Apartment</string>
+    <string name="acctype_residence">Residence</string>
+    <string name="acctype_guesthouse">Guesthouse</string>
+</resources>

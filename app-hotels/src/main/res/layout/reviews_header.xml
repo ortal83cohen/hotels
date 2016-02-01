@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/default_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:showIn="@layout/fragment_hoteldetails_reviews">
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/tripadvisor_logo" />
+
+        <RatingBar
+            android:id="@+id/tripadvisor_rating"
+            style="@style/HotelsAppTheme.Widget.TripAdviserRatingBar.Small"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/minimum_default_padding" />
+
+        <TextView
+            android:id="@+id/reviews"
+            style="@style/HotelsAppTheme.TextAppearance.Reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/minimum_default_padding"
+            tools:text="4.5" />
+
+        <TextView
+            style="@style/HotelsAppTheme.TextAppearance.Reviews.RatingMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text=" / 5" />
+
+        <TextView
+            android:id="@+id/reviewers"
+            style="@style/HotelsAppTheme.TextAppearance.Reviews.Count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            tools:text="37 Reviews" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ratings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+</LinearLayout>

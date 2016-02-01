@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="font_bold">OpenSans_Bold.ttf</string>
+    <string name="font_medium">OpenSans_Semibold.ttf</string>
+    <string name="font_reqular">OpenSans_Regular.ttf</string>
+    <string name="font_ultralight">OpenSans_Light.ttf</string>
+</resources>

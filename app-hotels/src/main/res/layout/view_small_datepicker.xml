@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_button_color_highlighted"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/daypicker_selector_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <ImageButton
+            android:id="@+id/datepicker_arrow_left"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/arrow_calendar_left" />
+
+        <LinearLayout
+            android:id="@+id/datepicker_month_year_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/datepicker_month"
+                style="@style/HotelsAppTheme.TextAppearance.Datepicker.Small.MonthYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:paddingRight="4dp"
+                android:text="@string/june" />
+
+            <TextView
+                android:id="@+id/datepicker_year"
+                style="@style/HotelsAppTheme.TextAppearance.Datepicker.Small.MonthYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="2015" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/datepicker_arrow_right"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/arrow_calendar_right" />
+
+    </LinearLayout>
+
+    <com.etb.app.widget.datepicker.DayPickerViewPager
+        android:id="@+id/datepicker_day"
+        style="?attr/libHotelsDatePickerViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="228dp" />
+</LinearLayout>

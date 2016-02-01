@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="google_api_key">AIzaSyAInvyZ-MTHOumciEv7EKYVZqpZ84-XiJE</string>
+    <string name="facebook_app_id">844757068941384</string>
+    <bool name="is_mixpanel_debug">false</bool>
+    <string name="branch_key_live">key_live_oliHoVDMnS068dt4bVdUVjcaExkzzJRQ</string>
+    <string name="branch_secret_live">secret_live_Ex3kQ4JOfVGo8McEwpYCYpQ5cxZheK82</string>
+    <string name="branch_key_test">key_test_khdJbVEJhK676nE4cOoVRnmkqBcqBIHF</string>
+    <string name="branch_secret_test">secret_test_2SY3ZZqPVanSkRDAuHCtqucLWE3asV3g</string>
+    <string name="google_analytics_id">UA-71961298-2</string>
+</resources>

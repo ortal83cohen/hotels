@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".widget.NumberPicker">
+
+    <Button
+        android:id="@+id/button_1"
+        style="?attr/buttonBarButtonStyle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/number_selector_background"
+        android:tag="1"
+        android:text="1"
+        android:textColor="@color/number_selector_text_color" />
+
+    <Button
+        android:id="@+id/button_2"
+        style="?attr/buttonBarButtonStyle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/number_selector_background"
+        android:tag="2"
+        android:text="2"
+        android:textColor="@color/number_selector_text_color" />
+
+    <Button
+        android:id="@+id/button_3"
+        style="?attr/buttonBarButtonStyle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/number_selector_background"
+        android:tag="3"
+        android:text="3"
+        android:textColor="@color/number_selector_text_color" />
+
+    <Button
+        android:id="@+id/button_4"
+        style="?attr/buttonBarButtonStyle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/number_selector_background"
+        android:tag="4"
+        android:text="4"
+        android:textColor="@color/number_selector_text_color" />
+
+    <Button
+        android:id="@+id/button_5"
+        style="?attr/buttonBarButtonStyle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/number_selector_background"
+        android:tag="5"
+        android:text="5"
+        android:textColor="@color/number_selector_text_color" />
+
+    <Button
+        android:id="@+id/button_6"
+        style="?attr/buttonBarButtonStyle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/number_selector_background"
+        android:tag="6"
+        android:text="6"
+        android:textColor="@color/number_selector_text_color" />
+</merge>

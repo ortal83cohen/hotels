@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="@dimen/default_padding"
+    android:layout_marginRight="@dimen/default_padding"
+    android:layout_marginTop="@dimen/default_padding"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/default_padding">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@android:id/icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="@dimen/default_padding"
+                android:src="@drawable/user_icon" />
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/HotelsAppTheme.TextAppearance.Review.Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@android:id/icon"
+                tools:text="Meike Smit" />
+
+            <TextView
+                android:id="@+id/purpose"
+                style="@style/HotelsAppTheme.TextAppearance.Review.Purpose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/name"
+                android:layout_marginLeft="@dimen/minimum_default_padding"
+                android:layout_toEndOf="@+id/name"
+                tools:text="(Individual Traveller)" />
+
+            <TextView
+                android:id="@+id/date"
+                style="@style/HotelsAppTheme.TextAppearance.Review.Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_toEndOf="@android:id/icon"
+                tools:text="24-05-2014" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/minimum_default_padding"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/reviews"
+                style="@style/HotelsAppTheme.TextAppearance.Review.Score"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                tools:text="4.5" />
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tripadvisor_logo" />
+
+            <RatingBar
+                android:id="@+id/tripadvisor_rating"
+                style="@style/HotelsAppTheme.Widget.TripAdviserRatingBar.Small"
+                android:layout_marginLeft="@dimen/minimum_default_padding" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@android:id/title"
+            style="@style/HotelsAppTheme.TextAppearance.Review.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/minimum_default_padding"
+            android:ellipsize="end"
+            android:maxLines="2" />
+
+        <TextView
+            android:id="@android:id/text1"
+            style="@style/HotelsAppTheme.TextAppearance.Review.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/minimum_default_padding"
+            android:ellipsize="end"
+            android:maxLines="8" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

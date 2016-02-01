@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/HotelsAppTheme.Fragment.SemiTransparent.Container">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/HotelsAppTheme.Fragment.SemiTransparent.Content">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                style="@style/HotelsAppTheme.TextAppearance.Hotel.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/choose_payment_method" />
+
+            <!--<ImageButton-->
+            <!--android:id="@+id/btn_payment_ccard"-->
+            <!--style="@style/HotelsAppTheme.Widget.Button.PaymentChoice"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:contentDescription="@string/credit_card"-->
+            <!--android:padding="@dimen/minimum_default_padding"-->
+            <!--android:src="@drawable/paymethodcredit_creditcards"-->
+            <!--android:visibility="gone"/>-->
+
+            <LinearLayout
+                android:id="@+id/btn_payment_ccard"
+                style="@style/HotelsAppTheme.Widget.Button.PaymentChoice"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/credit_card"
+                android:orientation="horizontal"
+                android:padding="@dimen/minimum_default_padding"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/btn_payment_paypal"
+                style="@style/HotelsAppTheme.Widget.Button.PaymentChoice"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/paypal"
+                android:padding="@dimen/minimum_default_padding"
+                android:src="@drawable/paymethod_paypal"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/btn_payment_checkout"
+                style="@style/HotelsAppTheme.Widget.Button.PaymentChoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/android_pay"
+                android:enabled="false"
+                android:padding="@dimen/minimum_default_padding"
+                android:src="@drawable/paymethod_google_wallet"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
