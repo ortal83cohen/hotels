@@ -72,7 +72,7 @@ public class OrderItem implements Parcelable {
         OrderItem item = new OrderItem();
         item.rateId = rate.rateId;
         item.rateKey = rate.rateKey;
-        item.chargeAmount = rate.payment.prepaid.get(currency);
+        item.chargeAmount = rate.payment.prepaid.containsKey(currency)?rate.payment.prepaid.get(currency):123.4; //todo remove this if
         item.rateName = rate.name;
         item.currency = currency;
         item.postPaidCurrency = postPayedCurrency;
@@ -85,9 +85,9 @@ public class OrderItem implements Parcelable {
         item.includedTax = 0.0;
         for (Accommodation.Rate.TaxesAndFees taxesAndFees : rate.taxesAndFees) {
             if (taxesAndFees.displayIncluded) {
-                item.includedTax += taxesAndFees.totalValue.get(item.currency);
+                item.includedTax += taxesAndFees.totalValue.containsKey(item.currency)?taxesAndFees.totalValue.get(item.currency):123.4;//todo remove this if
             } else {
-                item.extraTax += taxesAndFees.totalValue.get(item.currency);
+                item.extraTax += taxesAndFees.totalValue.containsKey(item.currency)?taxesAndFees.totalValue.get(item.currency):123.4;//todo remove this if
             }
         }
         item.paymentMethods = rate.paymentMethods;

@@ -56,10 +56,10 @@ public class PriceBreakdownFragment extends BaseFragment implements View.OnClick
     private Double mTotalAmount;
 
     public static PriceBreakdownFragment newInstance(int numbersOfRooms, OrderItem mOrderItem, PriceRender priceRender) {
-        Double roomsAmount = mOrderItem.displayBaseRate.get(mOrderItem.currency);
-        Double discountAmount = mOrderItem.displayBaseRate.get(mOrderItem.currency) - mOrderItem.displayPrice.get(mOrderItem.currency);
-        int discount = priceRender.calcDiscountPercent(mOrderItem.displayBaseRate.get(mOrderItem.currency), mOrderItem.displayPrice.get(mOrderItem.currency));
-        Double totalAmount = mOrderItem.displayPrice.get(mOrderItem.currency);
+        Double roomsAmount =priceRender.getByCurrency( mOrderItem.displayBaseRate,mOrderItem.currency);
+        Double discountAmount = priceRender.getByCurrency(mOrderItem.displayBaseRate,mOrderItem.currency) - priceRender.getByCurrency(mOrderItem.displayPrice,mOrderItem.currency);
+        int discount = priceRender.calcDiscountPercent(mOrderItem.displayBaseRate, mOrderItem.displayPrice,mOrderItem.currency);
+        Double totalAmount = priceRender.getByCurrency(mOrderItem.displayPrice,mOrderItem.currency);
         Double taxAmount = mOrderItem.includedTax;
 
         return newInstance(numbersOfRooms, roomsAmount, discount, discountAmount, taxAmount, totalAmount);

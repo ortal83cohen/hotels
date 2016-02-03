@@ -45,7 +45,7 @@ public class EtbApi {
 //    public static final String PATH_ACCOMMODATIONS = "/v1/accommodations";
 //    public static final String PATH_SEARCH = PATH_ACCOMMODATIONS + "/results";
 //    public static final String PATH_ORDERS = "/v1/orders";
-public static final String PATH_ACCOMMODATIONS ="/etbstatic/accomodationsDetails.json" ;
+public static final String PATH_ACCOMMODATIONS ="/etbstatic/checkRoomAvailability.json" ;
     public static final String PATH_SEARCH = "/etbstatic/searchingAccommodations.json" ;
     public static final String PATH_ORDERS = "/etbstatic/placeAnOrder.json";
     public static final int LIMIT = 15;

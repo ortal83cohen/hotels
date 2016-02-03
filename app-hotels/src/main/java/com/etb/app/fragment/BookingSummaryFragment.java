@@ -151,7 +151,7 @@ public class BookingSummaryFragment extends BaseFragment implements View.OnClick
         } else {
             mRoomName.setText(String.format("%d x %s", request.getNumberOfRooms(), mOrderItem.rateName));
         }
-        int discountPercent = priceRender.calcDiscountPercent(mOrderItem.displayBaseRate.get(currency), mOrderItem.displayPrice.get(currency));
+        int discountPercent = priceRender.calcDiscountPercent(mOrderItem.displayBaseRate, mOrderItem.displayPrice,currency);
         if (discountPercent < 2) {
             mDiscountText.setVisibility(View.GONE);
         } else {
@@ -170,16 +170,16 @@ public class BookingSummaryFragment extends BaseFragment implements View.OnClick
         } else {
             mExtra.setVisibility(View.GONE);
         }
-        mTotalPrice.setText(priceRender.render(mOrderItem.displayPrice.get(currency), request.getNumberOfRooms()));
+        mTotalPrice.setText(priceRender.render(mOrderItem.displayPrice, request.getNumberOfRooms(),currency));
         mTotalPrice.setOnClickListener(this);
         if (mOrderItem.postpaid.get(mOrderItem.postPaidCurrency) != null) {
             NumberFormat formatter = App.provide(getActivity()).getNumberFormatter(mOrderItem.postPaidCurrency);
             mPostpay.setText(formatter.format(mOrderItem.postpaid.get(mOrderItem.postPaidCurrency)));
         } else {
             NumberFormat formatter = App.provide(getActivity()).getNumberFormatter(currency);
-            mPostpay.setText(formatter.format(mOrderItem.postpaid.get(currency)));
+            mPostpay.setText(formatter.format(priceRender.getByCurrency(mOrderItem.postpaid,currency)));
         }
-        mPrepay.setText(priceRender.render(mOrderItem.prepaid.get(currency), request.getNumberOfRooms()));
+        mPrepay.setText(priceRender.render(mOrderItem.prepaid, request.getNumberOfRooms(),currency));
         String summary = r.getQuantityString(R.plurals.text_summary, request.getDateRange().days(), request.getDateRange().days());
         if (mOrderItem.extraTax > 0) {
             summary += " " + r.getString(R.string.text_tax_summary, priceRender.render(mOrderItem.extraTax, request.getNumberOfRooms()));

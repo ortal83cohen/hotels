@@ -30,9 +30,9 @@ public class ResultsMockClient implements Interceptor {
             final String path = uri.getPath();
             // Parse the Query String.
 
-            if (path.equals("/v1/accommodations/results")) {
+            if (path.equals("/v1/accommodations/results") || path.equals("/etbstatic/searchingAccommodations.json")) {
                 responseString = RESULTS;
-            } else if (path.startsWith("/v1/accommodations/")) {
+            } else if (path.startsWith("/v1/accommodations/")|| path.equals("/etbstatic/accomodationsDetails.json")) {
                 responseString = ACCOMMODATION;
             } else if (path.startsWith("/core_interface/sway.php/hotels/") && path.contains("/reviews")) {
                 responseString = REVIEWS;
