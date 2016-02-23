@@ -51,10 +51,7 @@ android {
         }
 
         release {
-            storeFile file(HOTELS_KEYSTORE_FILE)
-            storePassword HOTELS_KEYSTORE_PASSWORD
-            keyAlias HOTELS_KEY_ALIAS
-            keyPassword HOTELS_KEY_PASSWORD
+            storeFile file("../debug.keystore")
         }
     }
 
